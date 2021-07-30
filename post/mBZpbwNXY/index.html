@@ -1,0 +1,196 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>Jetbrains产品无限重置30天试用方法 | Wangcx&#39;s NoteBook</title>
+
+<link rel="shortcut icon" href="https://wangcx.me/favicon.ico?v=1627625986332">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://wangcx.me/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            Wangcx&#39;s NoteBook
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1627625986332" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    Jetbrains产品无限重置30天试用方法
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2021-07-28 ·
+                    </time>
+                    
+                </div>
+                <div class="post-content">
+                    <ul>
+<li>
+<h3 id="如何安装">如何安装</h3>
+</li>
+</ul>
+<p>1.插件市场安装：<br>
+在<code>Settings/Preferences... -&gt; Plugins</code>内手动添加第三方插件仓库地址：<code>https://plugins.zhile.io</code><br>
+搜索：<code>IDE Eval Reset</code>插件进行安装。<br>
+2.下载安装：<br>
+下载插件的zip包，地址：<code>https://plugins.zhile.io/files/ide-eval-resetter-2.1.15-3ef56c82.zip</code>（macOS可能会自动解压，然后把zip包丢进回收站）<br>
+通常可以直接把zip包拖进IDE的窗口来进行插件的安装。如果无法拖动安装，你可以在<code>Settings/Preferences... -&gt; Plugins</code>里手动安装插件（Install Plugin From Disk...）<br>
+插件会提示安装成功。</p>
+<!-- more -->
+<ul>
+<li>
+<h3 id="如何使用">如何使用</h3>
+</li>
+</ul>
+<p>一般来说，在IDE窗口切出去或切回来时（窗口失去/得到焦点）会触发事件，检测是否长时间（25天）没有重置，给通知让你选择。（初次安装因为无法获取上次重置时间，会直接给予提示）<br>
+也可以手动唤出插件的主界面：<br>
+如果IDE没有打开项目，在Welcome界面点击菜单：<code>Get Help -&gt; Eval Reset</code><br>
+如果IDE打开了项目，点击菜单：<code>Help -&gt; Eval Reset</code><br>
+唤出的插件主界面中包含了一些显示信息，2个按钮，1个勾选项：<br>
+按钮：<code>Reload</code>用来刷新界面上的显示信息。<br>
+按钮：<code>Reset</code>点击会询问是否重置试用信息并重启IDE。选择Yes则执行重置操作并重启IDE生效，选择No则什么也不做。（此为手动重置方式）<br>
+勾选项：<code>Auto reset before per restart</code> 如果勾选了，则自勾选后每次重启/退出IDE时会自动重置试用信息，你无需做额外的事情。（此为自动重置方式）</p>
+<ul>
+<li>
+<h3 id="支持的产品">支持的产品</h3>
+</li>
+</ul>
+<p>IntelliJ IDEA<br>
+AppCode<br>
+CLion<br>
+DataGrip<br>
+GoLand<br>
+PhpStorm<br>
+PyCharm<br>
+Rider<br>
+RubyMine<br>
+WebStorm</p>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://wangcx.me/post/ikW5KCr7k/" class="post-title gt-a-link">
+                    MySQL插入时间错误问题
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">Keep Coding...</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://wangcx.me/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

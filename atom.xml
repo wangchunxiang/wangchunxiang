@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://wangcx.me</id>
+    <title>Wangcx&apos;s NoteBook</title>
+    <updated>2021-07-30T06:19:51.692Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://wangcx.me"/>
+    <link rel="self" href="https://wangcx.me/atom.xml"/>
+    <subtitle>Keep Coding...</subtitle>
+    <logo>https://wangcx.me/images/avatar.png</logo>
+    <icon>https://wangcx.me/favicon.ico</icon>
+    <rights>All rights reserved 2021, Wangcx&apos;s NoteBook</rights>
+    <entry>
+        <title type="html"><![CDATA[Jetbrains产品无限重置30天试用方法]]></title>
+        <id>https://wangcx.me/post/mBZpbwNXY/</id>
+        <link href="https://wangcx.me/post/mBZpbwNXY/">
+        </link>
+        <updated>2021-07-28T07:03:08.000Z</updated>
+        <summary type="html"><![CDATA[<ul>
+<li>
+<h3 id="如何安装">如何安装</h3>
+</li>
+</ul>
+<p>1.插件市场安装：<br>
+在<code>Settings/Preferences... -&gt; Plugins</code>内手动添加第三方插件仓库地址：<code>https://plugins.zhile.io</code><br>
+搜索：<code>IDE Eval Reset</code>插件进行安装。<br>
+2.下载安装：<br>
+下载插件的zip包，地址：<code>https://plugins.zhile.io/files/ide-eval-resetter-2.1.15-3ef56c82.zip</code>（macOS可能会自动解压，然后把zip包丢进回收站）<br>
+通常可以直接把zip包拖进IDE的窗口来进行插件的安装。如果无法拖动安装，你可以在<code>Settings/Preferences... -&gt; Plugins</code>里手动安装插件（Install Plugin From Disk...）<br>
+插件会提示安装成功。</p>
+]]></summary>
+        <content type="html"><![CDATA[<ul>
+<li>
+<h3 id="如何安装">如何安装</h3>
+</li>
+</ul>
+<p>1.插件市场安装：<br>
+在<code>Settings/Preferences... -&gt; Plugins</code>内手动添加第三方插件仓库地址：<code>https://plugins.zhile.io</code><br>
+搜索：<code>IDE Eval Reset</code>插件进行安装。<br>
+2.下载安装：<br>
+下载插件的zip包，地址：<code>https://plugins.zhile.io/files/ide-eval-resetter-2.1.15-3ef56c82.zip</code>（macOS可能会自动解压，然后把zip包丢进回收站）<br>
+通常可以直接把zip包拖进IDE的窗口来进行插件的安装。如果无法拖动安装，你可以在<code>Settings/Preferences... -&gt; Plugins</code>里手动安装插件（Install Plugin From Disk...）<br>
+插件会提示安装成功。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MySQL插入时间错误问题]]></title>
+        <id>https://wangcx.me/post/ikW5KCr7k/</id>
+        <link href="https://wangcx.me/post/ikW5KCr7k/">
+        </link>
+        <updated>2021-01-29T00:05:51.000Z</updated>
+        <summary type="html"><![CDATA[<p>在程序中进行update操作时候，发现插入时间错误，IDEA执行的sql与本机（北京时间）相差8个小时，而在Navicat直接执行，则不能复现问题<br>
+通过搜索得知问题在于jdbc的连接参数上，大多数博客给出的默认jdbc连接参数都类似：</p>
+<pre><code>jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC
+</code></pre>
+]]></summary>
+        <content type="html"><![CDATA[<p>在程序中进行update操作时候，发现插入时间错误，IDEA执行的sql与本机（北京时间）相差8个小时，而在Navicat直接执行，则不能复现问题<br>
+通过搜索得知问题在于jdbc的连接参数上，大多数博客给出的默认jdbc连接参数都类似：</p>
+<pre><code>jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[JWT Token]]></title>
+        <id>https://wangcx.me/post/fAFtr36RJ/</id>
+        <link href="https://wangcx.me/post/fAFtr36RJ/">
+        </link>
+        <updated>2021-01-26T05:53:48.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="为什么使用jwt">为什么使用JWT？</h3>
+<p>随着技术的发展，分布式web应用的普及，通过session管理用户登录状态成本越来越高，因此慢慢发展成为token的方式做登录身份校验，然后通过token去取redis中的缓存的用户信息，随着之后jwt的出现，校验方式更加简单便捷化，无需通过redis缓存，而是直接根据token取出保存的用户信息，以及对token可用性校验，单点登录更为简单。</p>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="为什么使用jwt">为什么使用JWT？</h3>
+<p>随着技术的发展，分布式web应用的普及，通过session管理用户登录状态成本越来越高，因此慢慢发展成为token的方式做登录身份校验，然后通过token去取redis中的缓存的用户信息，随着之后jwt的出现，校验方式更加简单便捷化，无需通过redis缓存，而是直接根据token取出保存的用户信息，以及对token可用性校验，单点登录更为简单。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[shiro权限注解]]></title>
+        <id>https://wangcx.me/post/qgKue1rWa/</id>
+        <link href="https://wangcx.me/post/qgKue1rWa/">
+        </link>
+        <updated>2020-12-07T11:34:09.000Z</updated>
+        <summary type="html"><![CDATA[<p>Shiro 提供了相应的注解用于权限控制，如果使用这些注解就需要使用AOP 的功能来进行判断，如Spring AOP；Shiro 提供了Spring AOP 集成用于权限注解的解析和验证。</p>
+<pre><code>@RequiresAuthentication
+</code></pre>
+<p>表示当前Subject已经通过login 进行了身份验证；即Subject.isAuthenticated()返回true。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Shiro 提供了相应的注解用于权限控制，如果使用这些注解就需要使用AOP 的功能来进行判断，如Spring AOP；Shiro 提供了Spring AOP 集成用于权限注解的解析和验证。</p>
+<pre><code>@RequiresAuthentication
+</code></pre>
+<p>表示当前Subject已经通过login 进行了身份验证；即Subject.isAuthenticated()返回true。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GitHub文件下载加速]]></title>
+        <id>https://wangcx.me/post/EMSDlYCwH/</id>
+        <link href="https://wangcx.me/post/EMSDlYCwH/">
+        </link>
+        <updated>2020-09-15T07:33:13.000Z</updated>
+        <summary type="html"><![CDATA[<p>github上有非常多的开源项目，可每次下载的时候速度却非常慢，分享几个提供在线加速的网站<br>
+<a href="http://toolwa.com/github">http://toolwa.com/github</a><br>
+<a href="https://d.serctl.com">https://d.serctl.com</a><br>
+<a href="https://gh.api.99988866.xyz">https://gh.api.99988866.xyz</a><br>
+<a href="https://g.ioiox.com">https://g.ioiox.com</a><br>
+<a href="http://gitd.cc">http://gitd.cc</a><br>
+<a href="https://gh.sky-and-poem.fun">https://gh.sky-and-poem.fun</a><br>
+<a href="https://github.zhlh6.cn">https://github.zhlh6.cn</a></p>
+]]></summary>
+        <content type="html"><![CDATA[<p>github上有非常多的开源项目，可每次下载的时候速度却非常慢，分享几个提供在线加速的网站<br>
+<a href="http://toolwa.com/github">http://toolwa.com/github</a><br>
+<a href="https://d.serctl.com">https://d.serctl.com</a><br>
+<a href="https://gh.api.99988866.xyz">https://gh.api.99988866.xyz</a><br>
+<a href="https://g.ioiox.com">https://g.ioiox.com</a><br>
+<a href="http://gitd.cc">http://gitd.cc</a><br>
+<a href="https://gh.sky-and-poem.fun">https://gh.sky-and-poem.fun</a><br>
+<a href="https://github.zhlh6.cn">https://github.zhlh6.cn</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[VUE学习笔记二]]></title>
+        <id>https://wangcx.me/post/3YY2qSwa0/</id>
+        <link href="https://wangcx.me/post/3YY2qSwa0/">
+        </link>
+        <updated>2020-05-29T03:15:25.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="单向双向数据流及事件绑定">单向双向数据流及事件绑定</h3>
+<h4 id="单向数据流绑定属性值v-bind属性简写为属性">单向数据流绑定属性值<code>v-bind:(属性)</code>简写为<code>:(属性)</code></h4>
+<pre><code class="language-html">&lt;input v-bind:value=&quot;name&quot;  :class=&quot;name&quot; /&gt;
+</code></pre>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="单向双向数据流及事件绑定">单向双向数据流及事件绑定</h3>
+<h4 id="单向数据流绑定属性值v-bind属性简写为属性">单向数据流绑定属性值<code>v-bind:(属性)</code>简写为<code>:(属性)</code></h4>
+<pre><code class="language-html">&lt;input v-bind:value=&quot;name&quot;  :class=&quot;name&quot; /&gt;
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[VUE学习笔记一]]></title>
+        <id>https://wangcx.me/post/Zw-aD_R6u/</id>
+        <link href="https://wangcx.me/post/Zw-aD_R6u/">
+        </link>
+        <updated>2020-05-27T07:32:53.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="下载安装node">下载安装node</h3>
+<h3 id="执行如下命令安装vue如需下载特定版本在vue后边加上版本号例如vue25">执行如下命令安装vue(如需下载特定版本在vue后边加上@版本号，例如：<code>vue@2.5</code>)</h3>
+<p><code>cnpm</code>为国内镜像站</p>
+<pre><code class="language-bash">cnpm install vue 
+</code></pre>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="下载安装node">下载安装node</h3>
+<h3 id="执行如下命令安装vue如需下载特定版本在vue后边加上版本号例如vue25">执行如下命令安装vue(如需下载特定版本在vue后边加上@版本号，例如：<code>vue@2.5</code>)</h3>
+<p><code>cnpm</code>为国内镜像站</p>
+<pre><code class="language-bash">cnpm install vue 
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Homebrew 修改源]]></title>
+        <id>https://wangcx.me/post/3nM-03keu/</id>
+        <link href="https://wangcx.me/post/3nM-03keu/">
+        </link>
+        <updated>2020-05-14T09:07:04.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="切换brew源为国内镜像站">切换brew源为国内镜像站</h3>
+<h4 id="替换brewgit">替换brew.git</h4>
+<pre><code class="language-bash">cd &quot;$(brew --repo)&quot;
+</code></pre>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="切换brew源为国内镜像站">切换brew源为国内镜像站</h3>
+<h4 id="替换brewgit">替换brew.git</h4>
+<pre><code class="language-bash">cd &quot;$(brew --repo)&quot;
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Mac下安装HomeBrew]]></title>
+        <id>https://wangcx.me/post/UZRPlBp0k/</id>
+        <link href="https://wangcx.me/post/UZRPlBp0k/">
+        </link>
+        <updated>2020-05-11T03:25:20.000Z</updated>
+        <summary type="html"><![CDATA[<p>运行以下自动安装脚本：</p>
+<pre><code class="language-bash">/bin/zsh -c &quot;$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)&quot;
+</code></pre>
+]]></summary>
+        <content type="html"><![CDATA[<p>运行以下自动安装脚本：</p>
+<pre><code class="language-bash">/bin/zsh -c &quot;$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)&quot;
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[屏蔽MacOS Catalina的更新]]></title>
+        <id>https://wangcx.me/post/V1qrPLxWE/</id>
+        <link href="https://wangcx.me/post/V1qrPLxWE/">
+        </link>
+        <updated>2019-11-14T01:05:59.000Z</updated>
+        <summary type="html"><![CDATA[<p>MacOS Mojave软件更新变为独立的功能存在于系统偏好设置里面，并且可以直接自动检测大版本的升级。Catalina系统刚放出还有不少bug，而且从Catalina开始不支持32程序了。所以我并不想升级到MacOS Catalina，但是每次看到软件更新的小红点，强迫症发作。以下这个办法可以屏蔽已经检测到的升级，并且去掉烦人的小红点。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>MacOS Mojave软件更新变为独立的功能存在于系统偏好设置里面，并且可以直接自动检测大版本的升级。Catalina系统刚放出还有不少bug，而且从Catalina开始不支持32程序了。所以我并不想升级到MacOS Catalina，但是每次看到软件更新的小红点，强迫症发作。以下这个办法可以屏蔽已经检测到的升级，并且去掉烦人的小红点。</p>
+]]></content>
+    </entry>
+</feed>
