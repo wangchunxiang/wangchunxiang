@@ -6,7 +6,7 @@
 
 <title>MySQL插入时间错误问题 | Wangcx&#39;s NoteBook</title>
 
-<link rel="shortcut icon" href="https://wangcx.me/favicon.ico?v=1632365230558">
+<link rel="shortcut icon" href="https://wangcx.me/favicon.ico?v=1632365820992">
 
 <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://wangcx.me/styles/main.css">
@@ -77,7 +77,7 @@
             
         </div>
         <div style="text-align: center">
-            <form id="gridea-search-form" style="position: relative" data-update="1632365230558" action="/search/index.html">
+            <form id="gridea-search-form" style="position: relative" data-update="1632365820992" action="/search/index.html">
                 <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
                 <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
             </form>
@@ -106,7 +106,6 @@
 通过搜索得知问题在于jdbc的连接参数上，大多数博客给出的默认jdbc连接参数都类似：</p>
 <pre><code>jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC
 </code></pre>
-<!-- more -->
 <p>问题出在<code>serverTimezone=UTC</code>这个配置上，UTC，简称世界统一时间，跟北京时间相比，比北京早8个小时，如果定义了<code>serverTimezone=UTC</code>，那么在你编译器上执行的SQL语句，会先以UTC时区进行存储，发送到MySQL,然后MySQL以本地时区进行转换，就会导致，同一段SQL语句，在Navicat直接执行，与IDEA执行，结果不同</p>
 <p>解决方案：<br>
 改为<code>serverTimezone=GMT%2B8</code>，<code>GMT%2B8</code>代表是东八区时间，也就是北京时间<br>

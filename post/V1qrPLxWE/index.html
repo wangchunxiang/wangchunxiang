@@ -6,7 +6,7 @@
 
 <title>屏蔽MacOS Catalina的更新 | Wangcx&#39;s NoteBook</title>
 
-<link rel="shortcut icon" href="https://wangcx.me/favicon.ico?v=1632365230558">
+<link rel="shortcut icon" href="https://wangcx.me/favicon.ico?v=1632365820992">
 
 <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://wangcx.me/styles/main.css">
@@ -77,7 +77,7 @@
             
         </div>
         <div style="text-align: center">
-            <form id="gridea-search-form" style="position: relative" data-update="1632365230558" action="/search/index.html">
+            <form id="gridea-search-form" style="position: relative" data-update="1632365820992" action="/search/index.html">
                 <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
                 <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
             </form>
@@ -103,7 +103,6 @@
                 </div>
                 <div class="post-content">
                     <p>MacOS Mojave软件更新变为独立的功能存在于系统偏好设置里面，并且可以直接自动检测大版本的升级。Catalina系统刚放出还有不少bug，而且从Catalina开始不支持32程序了。所以我并不想升级到MacOS Catalina，但是每次看到软件更新的小红点，强迫症发作。以下这个办法可以屏蔽已经检测到的升级，并且去掉烦人的小红点。</p>
-<!--more-->
 <h3 id="在终端输入">在终端输入</h3>
 <pre><code class="language-bash">defaults write com.apple.systempreferences AttentionPrefBundleIDs 0
 </code></pre>
