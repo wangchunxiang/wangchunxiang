@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wangcx.me</id>
     <title>Wangcx&apos;s NoteBook</title>
-    <updated>2021-09-13T01:57:37.642Z</updated>
+    <updated>2021-09-23T02:47:20.363Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wangcx.me"/>
     <link rel="self" href="https://wangcx.me/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://wangcx.me/images/avatar.png</logo>
     <icon>https://wangcx.me/favicon.ico</icon>
     <rights>All rights reserved 2021, Wangcx&apos;s NoteBook</rights>
+    <entry>
+        <title type="html"><![CDATA[Mac上用homebrew方式安装vue]]></title>
+        <id>https://wangcx.me/post/edF1Oc9aD/</id>
+        <link href="https://wangcx.me/post/edF1Oc9aD/">
+        </link>
+        <updated>2021-09-23T02:42:33.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[IDEA中隐藏不想看到的文件]]></title>
         <id>https://wangcx.me/post/NB6MTqTzs/</id>
@@ -190,21 +197,6 @@ mvnw<br>
         <content type="html"><![CDATA[<h3 id="切换brew源为国内镜像站">切换brew源为国内镜像站</h3>
 <h4 id="替换brewgit">替换brew.git</h4>
 <pre><code class="language-bash">cd &quot;$(brew --repo)&quot;
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Mac下安装HomeBrew]]></title>
-        <id>https://wangcx.me/post/UZRPlBp0k/</id>
-        <link href="https://wangcx.me/post/UZRPlBp0k/">
-        </link>
-        <updated>2020-05-11T03:25:20.000Z</updated>
-        <summary type="html"><![CDATA[<p>运行以下自动安装脚本：</p>
-<pre><code class="language-bash">/bin/zsh -c &quot;$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)&quot;
-</code></pre>
-]]></summary>
-        <content type="html"><![CDATA[<p>运行以下自动安装脚本：</p>
-<pre><code class="language-bash">/bin/zsh -c &quot;$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)&quot;
 </code></pre>
 ]]></content>
     </entry>

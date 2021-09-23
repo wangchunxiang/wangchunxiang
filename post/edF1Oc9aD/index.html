@@ -4,7 +4,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>1024，节日快乐 | Wangcx&#39;s NoteBook</title>
+<title>Mac上用homebrew方式安装vue | Wangcx&#39;s NoteBook</title>
 
 <link rel="shortcut icon" href="https://wangcx.me/favicon.ico?v=1632365230558">
 
@@ -89,11 +89,11 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    1024，节日快乐
+                    Mac上用homebrew方式安装vue
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
-                        · 2019-10-24 ·
+                        · 2021-09-23 ·
                     </time>
                     
                         <a href="https://wangcx.me/tag/cG4yfJWeS/" class="post-tags">
@@ -102,8 +102,19 @@
                     
                 </div>
                 <div class="post-content">
-                    <p>1024程序员节是中国广大程序员的共同节日。1024是2的十次方，二进制计数的基本计量单位之一。程序员(英文Programmer)是从事前端、后端程序开发、系统运维、测试等的专业人员。程序员就像是一个个1024，以最低调、踏实、核心的功能模块搭建起这个科技世界。1G=1024M，而1G与1级谐音，也有一级棒的意思。</p>
-<!-- more -->
+                    <p>1、安装homebrew(如果已经安装过homebrew则跳过)</p>
+<pre><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+</code></pre>
+<p>2、通过brew方式安装node和npm</p>
+<pre><code>brew install node
+</code></pre>
+<p>3、安装cnpm<br>
+基于node.js,利用淘宝npm镜像安装相关依赖。由于国内使用npm会很慢,推荐使用淘宝NPM镜像</p>
+<pre><code>npm install -g cnpm --registry=https://registry.npm.taobao.org
+</code></pre>
+<p>4、安装vue-cli</p>
+<pre><code>npm install -g vue-cli
+</code></pre>
 
                 </div>
             </article>
@@ -112,8 +123,8 @@
         
             <div class="next-post">
                 <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://wangcx.me/post/q7KSfPGKv/" class="post-title gt-a-link">
-                    macOS JDK多版本配置及切换
+                <a href="https://wangcx.me/post/NB6MTqTzs/" class="post-title gt-a-link">
+                    IDEA中隐藏不想看到的文件
                 </a>
             </div>
         
