@@ -2,14 +2,21 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wangcx.me</id>
     <title>Wangcx&apos;s NoteBook</title>
-    <updated>2021-09-23T02:57:05.738Z</updated>
+    <updated>2022-01-08T14:58:54.697Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wangcx.me"/>
     <link rel="self" href="https://wangcx.me/atom.xml"/>
     <subtitle>Keep Coding...</subtitle>
     <logo>https://wangcx.me/images/avatar.png</logo>
     <icon>https://wangcx.me/favicon.ico</icon>
-    <rights>All rights reserved 2021, Wangcx&apos;s NoteBook</rights>
+    <rights>All rights reserved 2022, Wangcx&apos;s NoteBook</rights>
+    <entry>
+        <title type="html"><![CDATA[JSON数组转换树结构]]></title>
+        <id>https://wangcx.me/post/n4Mn8cNrK/</id>
+        <link href="https://wangcx.me/post/n4Mn8cNrK/">
+        </link>
+        <updated>2022-01-08T14:54:41.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Mac上用homebrew方式安装vue]]></title>
         <id>https://wangcx.me/post/edF1Oc9aD/</id>
@@ -72,12 +79,5 @@
         <link href="https://wangcx.me/post/Zw-aD_R6u/">
         </link>
         <updated>2020-05-27T07:32:53.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Homebrew 修改源]]></title>
-        <id>https://wangcx.me/post/3nM-03keu/</id>
-        <link href="https://wangcx.me/post/3nM-03keu/">
-        </link>
-        <updated>2020-05-14T09:07:04.000Z</updated>
     </entry>
 </feed>
