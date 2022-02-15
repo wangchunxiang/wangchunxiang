@@ -4,7 +4,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>Wangcx&#39;s NoteBook</title>
+<title>防止请求参数SQL注入的正则表达式 | Wangcx&#39;s NoteBook</title>
 
 <link rel="shortcut icon" href="https://wangcx.me/favicon.ico?v=1644892856358">
 
@@ -25,11 +25,11 @@
 
 
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
 </head>
 <body>
 <div class="main gt-bg-theme-color-first">
-    <div class="main-content">
-        <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg">
     <div class="navbar-brand">
         <img class="user-avatar" src="/images/avatar.png" alt="头像">
         <div class="site-name gt-c-content-color-first">
@@ -85,22 +85,117 @@
     </div>
 </nav>
 
-        <div class="post-container">
-            <div class="post-detail gt-bg-theme-color-first">
-                <article class="gt-post-content">
-                    <h2 class="post-title">标签</h2>
-        <div class="tags-container">
-            
-                <a class="tag gt-c-content-color-first gt-a-link"
-                   href="https://wangcx.me/tag/cG4yfJWeS/">#编程生涯</a>
-            
-                <a class="tag gt-c-content-color-first gt-a-link"
-                   href="https://wangcx.me/tag/WKNyq4HGPS/">#生活随笔</a>
-            
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    防止请求参数SQL注入的正则表达式
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2022-02-15 ·
+                    </time>
+                    
+                        <a href="https://wangcx.me/tag/cG4yfJWeS/" class="post-tags">
+                            # 编程生涯
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <pre><code class="language-java">import com.apa.biz.exception.ServiceException;
+import com.apa.biz.utils.ServletsUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.web.servlet.HandlerInterceptor;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.regex.Pattern;
+
+/**
+ * sql拦截器，防止sql注入
+ * @Author wangcx
+ * @Date 2022-02-15 10:35:27
+ */
+public class SqlInterceptor implements HandlerInterceptor {
+
+	//放行请求列表
+	private List&lt;String&gt; exceptUrls;
+	//获取放行请求列表
+	public  void setExceptUrls(List&lt;String&gt; exceptUrls) {
+		this.exceptUrls = exceptUrls;
+	}
+
+	/**
+	 * 正则表达式
+     * //b  表示 限定单词边界  比如  select 不通过   1select则是可以的
+	 **/
+	private static String reg = &quot;(?:')|(?:--)|(/\\*(?:.|[\\n\\r])*?\\*/)|(\\b(select|update|union|and|or|insert|trancate|char|into|substr|ascii|declare|exec|count|master|into|drop|execute)\\b)&quot;;
+
+	private static Pattern sqlPattern = Pattern.compile(reg, Pattern.CASE_INSENSITIVE);
+
+	@Override
+	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+		HttpServletRequest httpServletRequest = (HttpServletRequest)request;
+		Map&lt;String, Object&gt; params = ServletsUtil.getParameters(request);
+		//对指定请求放行
+		for (String url:exceptUrls){
+			if(params.containsKey(&quot;diyContent&quot;)&amp;&amp;request.getRequestURI().equals(url)){
+				return true;
+			}
+		}
+        //只对POST过滤，去掉此层if则对所有请求都过滤
+		if(!&quot;GET&quot;.equals(httpServletRequest.getMethod())){
+			for (Entry&lt;String, Object&gt; entry : params.entrySet()) {
+				String str = entry.getValue().toString().toLowerCase();
+				if (sqlPattern.matcher(str).find()) {
+					logger.info(&quot;拦截到SQL注入攻击：str=&quot; + str);
+					//throw new ServiceException(&quot;未能通过sql过滤器&quot;);
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+
+	@Override
+	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
+						   ModelAndView modelAndView) throws Exception {
+
+	}
+
+	@Override
+	public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
+			throws Exception {
+
+	}  
+      
+}  
+</code></pre>
+
+                </div>
+            </article>
         </div>
-    </article>
-</div>
-</div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://wangcx.me/post/n4Mn8cNrK/" class="post-title gt-a-link">
+                    JSON数组转换树结构
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+
         <div class="site-footer gt-c-content-color-first">
     <div class="slogan gt-c-content-color-first">Keep Coding...</div>
     <div class="social-container">
