@@ -6,7 +6,7 @@
 
 <title>防止请求参数SQL注入的正则表达式 | Wangcx&#39;s NoteBook</title>
 
-<link rel="shortcut icon" href="https://wangcx.me/favicon.ico?v=1644892856358">
+<link rel="shortcut icon" href="https://wangcx.me/favicon.ico?v=1650590248825">
 
 <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://wangcx.me/styles/main.css">
@@ -77,7 +77,7 @@
             
         </div>
         <div style="text-align: center">
-            <form id="gridea-search-form" style="position: relative" data-update="1644892856358" action="/search/index.html">
+            <form id="gridea-search-form" style="position: relative" data-update="1650590248825" action="/search/index.html">
                 <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
                 <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
             </form>
@@ -102,9 +102,7 @@
                     
                 </div>
                 <div class="post-content">
-                    <pre><code class="language-java">import com.apa.biz.exception.ServiceException;
-import com.apa.biz.utils.ServletsUtil;
-import org.slf4j.Logger;
+                    <pre><code class="language-java">import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -118,8 +116,6 @@ import java.util.regex.Pattern;
 
 /**
  * sql拦截器，防止sql注入
- * @Author wangcx
- * @Date 2022-02-15 10:35:27
  */
 public class SqlInterceptor implements HandlerInterceptor {
 
